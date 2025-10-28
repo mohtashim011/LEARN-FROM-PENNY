@@ -284,15 +284,12 @@ gap: 20px !important;
   font-size: 16px !important
 }
 .icon-box-img h5{
-  font-size: 17px !important
+  font-size: 15px !important
 }
 .buttons{
   padding-top: 20% !important;
 }
-.pre-btn11{
-left: 82% !important;
 
-}
 .module{
   flex-direction: column !important;
 }
@@ -502,8 +499,8 @@ margin: 0 auto;
    background-position: center;
    background-repeat: no-repeat;
   position: relative !important;
-  bottom: 70px;
-  left: 85% !important;
+  /* bottom: 70px; */
+  /* left: 85% !important; */
   
 }
 .next-btn{
@@ -512,8 +509,8 @@ margin: 0 auto;
    background-position: center;
    background-repeat: no-repeat;
   position: relative !important;
-  bottom: 92px;
-  right: -88% !important;
+  /* bottom: 92px; */
+  /* right: -88% !important; */
 }
 .pre-btn:hover ,.next-btn:hover {
 
@@ -528,7 +525,45 @@ margin: 0 auto;
 .next-btn:hover img {
   opacity: 0.5;
 }
-
+.car-btn-dir{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0px 20px;
+    margin-top: -40px !important;
+    padding-bottom: 120px;
+    max-width: 1320px;
+    margin: 0 auto;
+    gap: 20px;
+}
+.car-btn-dir1{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0px 20px;
+    margin-top: -40px !important;
+    padding-bottom: 120px;
+    max-width: 1320px;
+    margin: 0 auto;
+    gap: 20px;
+    align-content: center;
+    flex-direction: row;
+}
+.car-btn-dir2{
+    display: flex;
+   justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0px 20px;
+    /* margin-top: -40px !important; */
+    padding-bottom: 120px;
+    padding-top: 60px;
+    max-width: 1320px;
+    margin: 0 auto;
+    gap: 20px;
+     align-content: center;
+    flex-direction: co;
+}
 .swiper-navigation-icon{
   display: none;
 }
@@ -832,8 +867,8 @@ margin: 0 auto;
    background-position: center;
    background-repeat: no-repeat;
   position: relative !important;
-  bottom: 70px;
-  left: 85% !important;
+  /* bottom: 70px;
+  left: 85% !important; */
   
 }
 .next-btn1{
@@ -842,8 +877,8 @@ margin: 0 auto;
    background-position: center;
    background-repeat: no-repeat;
   position: relative !important;
-  bottom: 92px;
-  right: -88% !important;
+  /* bottom: 92px;
+  right: -88% !important; */
 }
 .pre-btn1:hover ,.next-btn1:hover {
 
@@ -1329,9 +1364,9 @@ padding-bottom: 60px;
    background-position: center;
    background-repeat: no-repeat;
   position: relative !important;
-  bottom: 70px;
+  /* bottom: 70px;
   left: 90% !important;
-  
+   */
   
 }
 .next-btn11{
@@ -1340,8 +1375,8 @@ padding-bottom: 60px;
    background-position: center;
    background-repeat: no-repeat;
   position: relative !important;
-  bottom: 92px;
-  right: -94% !important;
+  /* bottom: 92px;
+  right: -94% !important; */
 }
 .pre-btn11:hover ,.next-btn11:hover {
 
@@ -1356,9 +1391,7 @@ padding-bottom: 60px;
 .next-btn11:hover img {
   opacity: 0.5;
 }
-.buttons{
-  padding-top: 10%;
-}
+
 
 
 /* footer */
