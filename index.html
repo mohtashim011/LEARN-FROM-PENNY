@@ -30,43 +30,47 @@
 
     <img src="img/pause-icon.svg" alt="Toggle Video" class="video-toggle" id="videoToggle">
     
-    <header>
-        
-    <!-- Header -->
-<div class="navbar-wrapper fade-in">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 container">
-    <div class="navbar-con container">
+   <header>
+  <div class="navbar-wrapper fade-in">
+    <nav class="navbar container-header">
+      <!-- Logo -->
       <a class="navbar-brand" href="#home">
-        <img src="./img/logo.svg" alt="Logo" width="125" height="30">
+        <img src="./img/logo.svg" alt="Logo">
       </a>
 
-      <!-- Toggle button (hamburger) -->
-      <!-- <button class="menu-toggle d-lg-none" aria-label="Toggle Menu">
-        ☰
-      </button> -->
-    </div>
+      <!-- Toggle Button -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
 
-    <!-- Desktop Menu -->
-    <div class="menu collapse navbar-collapse justify-content-between d-none d-lg-flex" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="#feature">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#how-it-works">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">Course</a></li>
-        <li class="nav-item"><a class="nav-link" href="#footer">Who It’s For</a></li>
-        <li class="nav-item"><a class="nav-link" href="#footer">Pricing</a></li>
-        <li class="nav-item"><a class="nav-link" href="#footer">FAQs</a></li>
-        <li class="nav-item"><a class="nav-link" href="/sales.html">Contact</a></li>
-      </ul>
-    </div>
+      <!-- Menu -->
+       <div class="menu-main">
+      <div class="menu" id="navbarMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#feature">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#how-it-works">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Course</a></li>
+          <li class="nav-item"><a class="nav-link" href="#footer">Who It’s For</a></li>
+          <li class="nav-item"><a class="nav-link" href="#footer">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#footer">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+        </ul>
+        </div>
+        <!-- Enroll button inside menu for mobile -->
+        <div class="header-btn mobile-btn">
+              
+          <!-- <a class="header-btn2" href="#cta">
+            Enroll Now <img src="./img/btn-icon.svg" alt="User Icon">
+          </a> -->
+        </div>
+      </div>
 
-    <!-- Desktop Buttons -->
-    <div class="header-btn d-none d-lg-flex gap-2">
-      <a class="header-btn2 btn-primary d-flex align-items-center gap-2" href="#cta">
-        Enroll Now <img src="./img/btn-icon.svg" alt="User Icon" width="30" height="30">
-      </a>
-    </div>
-  </nav>
-</div>
+      <!-- Desktop Button -->
+      <div class="header-btn desktop-btn">
+        <a class="header-btn2" href="#cta">
+          Enroll Now <img src="./img/btn-icon.svg" alt="User Icon">
+        </a>
+      </div>
+    </nav>
+  </div>
 </header>
 <section>
     <div class="container-banner">

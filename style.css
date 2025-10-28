@@ -6,6 +6,11 @@
 max-width: 1320px;
 margin: 0 auto;
 }
+.container-header{
+    padding: 20px;
+max-width: 1320px;
+margin: 0 auto;
+}
 html{
     overflow-x: hidden;
 }
@@ -205,9 +210,11 @@ ease;
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  display: flex;
+  flex-direction: row-reverse;
 }
 .header-btn2 img {
-  width: 30px;
+  width: 72px;
   height: auto;
 }
 
@@ -226,6 +233,12 @@ ease;
   .menu-toggle {
     display: block;
   }
+  header{
+    z-index: 999 !important;
+  }
+  .banner-z{
+    z-index: 1 !important;
+  }
 .menu-main{
          display: flex;
         flex-direction: column;
@@ -233,7 +246,7 @@ ease;
         position: absolute !important;
         top: 90%;
         width: 100%;
-        align-items: center;
+        align-items: flex-start;
         
 }
 
@@ -260,7 +273,7 @@ ease;
 }
   .menu.active {
     display: flex;
-    width: 80%;
+    width: 90%;
   }
 
   .menu ul {
@@ -288,6 +301,12 @@ ease;
   }
 }
 
+
+@media (max-width: 430px) {
+    .menu.active {
+        display: flex;
+        width: 80%;
+    }}
 
 /* banner */
 
@@ -444,8 +463,13 @@ width: 80% !important;
 
 }
 @media (max-width: 767px) {
-  
-  .container,.container-banner{
+  .container-banner{
+        padding: 40px 20px 80px 20px !important;
+  }
+  .container-header{
+    padding: 20px !important;
+  }
+  .container{
         padding: 80px 20px !important;
   }
   .step-main h2 {
@@ -1030,7 +1054,7 @@ margin: 0 auto;
         gap: 10px !important;
   }
   .active{
-    padding: 20px !important;
+       padding: 50px 20px !important;
   }
   .faqs{
     padding: 0px !important;
@@ -1915,7 +1939,7 @@ margin: 0 auto;
     font-weight: 400;
   }
 .active{
-  background-color: #F8EFEC;
+  background-color: #EACBC3;
   border-radius: 10px;
  padding: 30px 30px 25px 30px;
 }
