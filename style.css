@@ -320,7 +320,7 @@ text-align: center;
   /* justify-content: space-between; */
 }
 .footer-btm1{
-  width: 70% !important;
+  width: 50% !important;
 }
 .footer-btm2{
 width: 80% !important;
@@ -345,13 +345,46 @@ width: 80% !important;
   justify-content: space-between;
   padding:20px ;
 }
+.flip-box-front h4 {
+    text-align: start;
+    font-size: 18px;
+}
+.flip-image-con h3{
+  font-size: 18px !important;
+}
+.filp-back-p{
+  font-size: 16px !important  ;
+  width: 100% !important;
+}
+.flip-btn{
+  font-size: 14px !important;
+}
+.flip-box-front h2{
+  font-size: 45px !important;
+}
+.filpbox-front-con{
+  gap: 15px !important;
 }
 
+.about-main{
+    flex-direction: column-reverse !important;
+}
+.abt-img-icon1 {
+    width: 100% !important;
+    height: auto !important;}
+    .who-main h2{
+      width: 95%!important;
+    }
+
+}
 @media (max-width: 767px) {
   .heading-sub,
   .heading-sub1 {
     font-size: 18px !important;
   }
+  .footer-btm1{
+  width: 100% !important;
+}
   .price13{
     font-size: 40px !important;
   }
@@ -468,6 +501,7 @@ margin: 0 auto;
     letter-spacing: 5px;  
     font-family: 'Poppins';
     text-transform: uppercase;
+        text-align: center;
 }
 .step-main{
     display: flex;
@@ -780,13 +814,13 @@ margin: 0 auto;
       display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 100px;
+     flex-wrap: wrap;
+    gap: 32px;
     padding-top: 80px;
 }
 .masked-image {
-      width: 260px;
-    height: 240px;
+      width: 250px;
+    height: 230px;
     display: flex;
     background-position: center;
     background-repeat: no-repeat;
@@ -822,8 +856,83 @@ margin: 0 auto;
     flex-direction: column;
     align-items: center;
     flex-wrap: nowrap;
+    width: 23% ;
+}
+@media (max-width: 1024px) {
+  .cus-h4{
+    width: 45% !important;
+  }
+  .mod-h2{
+    width: 95%  !important;
+  }
+  .dis-main{
+    gap: 0px !important;
+  }
+  .plane{
+    left: 25px !important;
+    margin-top: 0px !important;
+  }
+  .choose-main{
+    flex-direction: column !important;
+  }
+  .choose-2 img{
+    width: 100% !important;
+        border-radius: 0px 0px 50px 50px !important;
+  }
+  .choose-2{
+    width: 100% !important;
+  }
+  .video-h2{
+    width: 95% !important;
+  }
+  .curve-text{
+    margin-top: -27% !important;
+  }
+  .content{
+    flex-direction: column !important;
+  }
+  .list{
+    width: 100% !important;
+  }
+  .text-content{
+    width: 100% !important;
+  }
+  .faq-answer p{
+    font-size: 15px !important;
+  }
+  .faq-question{
+    font-size: 17px !important;
+        align-items: flex-start !important;
+  }
+  .active{
+    padding: 20px !important;
+  }
+  .faqs{
+    padding: 0px !important;
+  }
 }
 
+
+@media (max-width: 767px) {
+  .cus-h4{
+    width: 90% !important;
+  }
+  .abt-img-icon{
+    width: 50%  !important;
+  }
+   .curve-text{
+    margin-top: -41% !important;
+  }
+  /* .footer-bottom1{
+    align-items: center !important;
+  } */
+}
+@media (max-width: 325px) {
+ .curve-text{
+    margin-top: -52% !important;
+  }
+
+}
 .header-btnwho {
   background: transparent;
   border: none;
@@ -1646,7 +1755,8 @@ margin: 0 auto;
     color: rgba(0, 0, 0, 1);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    padding: 0px;
   }
 
   .faq-question .icon {
@@ -2123,6 +2233,7 @@ width: 85%;
     animation-play-state: paused;
   }
 
+
   /* Responsive */
   @media (max-width: 768px) {
     .tile {
@@ -2132,6 +2243,9 @@ width: 85%;
     }
     .row {
       animation-duration: 20s;
+    }
+    .custom-svg img{
+      margin-top: -18% !important;
     }
   }
 
@@ -2148,7 +2262,7 @@ max-width: 1320px;
 margin: 0 auto;
 }
 .video-h2{
-  width: 60% !important;
+  width: 60% ;
   text-align: center;
 }
 /* .video-text-main{
