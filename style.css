@@ -287,6 +287,13 @@ width: 80% !important;
 .footer-bottom2 p{
   font-size: 14px !important;
 }
+ .footer-bottom2 {
+    display: flex;
+    flex-direction: column !important;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
 .top p{
   font-size: 12px !important;
 }
@@ -351,7 +358,12 @@ width: 80% !important;
   .content-box{
     padding: 10px !important;
   }
+ 
 }
+@media (max-width: 380px) {
+.footer-bottom2 p{
+  font-size: 12px !important;
+}}
 
 .banner-main1{
     display: flex;
