@@ -273,7 +273,7 @@ gap: 20px !important;
   padding: 30px !important;
 }
 .key-2{
-  width: 86% !important;
+  width: 85% !important;
   height: 500px !important;
   border-radius: 30px !important;
 }
@@ -378,9 +378,57 @@ width: 80% !important;
 
 }
 @media (max-width: 767px) {
+  
+  .container,.container-banner{
+        padding: 80px 20px !important;
+  }
+  .about-main{
+    padding-top: 60px !important;
+  }
+  .choose-1{
+    padding: 60px 30px !important;
+  }
+  .counter-sub2{
+    font-size: 14px !important;
+    margin-top: -5% !important;
+  }
+  #countdown{
+    width: 90% !important;
+    padding: 25px !important;
+        justify-content: center !important;
+    align-items: center !important;
+    /* border-radius: 0px  !important; */
+    gap: 0px !important;
+    flex-direction: column;
+  }
+  #countdown span{
+    font-size: 45px !important;
+  }
+  
+  .header-btn21, .header-btnwho{
+    font-size: 12px !important;
+  }
+  .dis-2, .dis-1{
+    padding: 40px 25px !important;
+  }
+  
   .heading-sub,
   .heading-sub1 {
     font-size: 18px !important;
+  }
+  .top{
+    flex-direction: row !important;
+    align-items: center !important;
+    padding: 7px !important;
+    gap: 0px;
+  }
+  .top-btn{
+    font-size: 10px !important;
+  }
+  .top p{
+    font-size: 10px !important;
+    width: 70% !important;
+    /* text-align: center; */
   }
   .footer-btm1{
   width: 100% !important;
@@ -403,9 +451,7 @@ width: 80% !important;
   .icon-list1{
     gap: 20px !important;
   }
-  .header-btnwho{
-    font-size: 15px !important;
-  }
+ 
   .counter-head span{
     font-size: 50px !important;
   }
@@ -416,7 +462,9 @@ width: 80% !important;
     flex-direction: column;
   }
   .key-2{
-    width: 74% !important;
+    width: 85% !important;
+    background-position: center !important;
+    background-size: cover !important;
   }
   .icon-list li{
     font-size: 15px !important;
@@ -438,7 +486,13 @@ width: 80% !important;
 .footer-bottom2 p{
   font-size: 12px !important;
 }}
+@media (max-width: 380px) {
 
+.key-2{
+    width: 82% !important;}
+
+}
+  
 .banner-main1{
     display: flex;
     flex-direction: column;
@@ -1988,13 +2042,16 @@ background: #F2DED9;
 }
 @media (max-width: 1024px) {
 #countdown {
-  gap: 30px !important;
+  gap: 10px !important;
 }
 #countdown span{
   font-size: 60px  !important;
 }
 .count-main{
-  margin-top: -30% !important;}
+  margin-top: -30% !important;
+  width: 80% !important;
+  margin-bottom: 0% !important;
+}
 .enroll-main{
   flex-direction: column !important;
   padding-top: 60px;
@@ -2003,6 +2060,20 @@ background: #F2DED9;
   width: 90%;
       gap: 25px;
 }
+}
+@media (max-width: 767px) {
+  #countdown span{
+    font-size: 45px !important;
+  }
+.enroll-con{
+  width: 85% !important;
+}
+.enroll-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 }
 
 #countdown div {
