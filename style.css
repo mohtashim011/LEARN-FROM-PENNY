@@ -116,11 +116,11 @@ p{
   height: 140vh; /* your section height */
   overflow: hidden; /* hide video overflow */
     background: linear-gradient(
-    135deg, /* direction: top-left to bottom-right */
+    90deg, /* direction: top-left to bottom-right */
     rgba(0, 0, 0, 0.9) 0%,   /* dark top-left */
-    rgba(0, 0, 0, 0.6) 80%,  /* slightly lighter */
-    rgba(0, 0, 0, 0.8) 80%,  /* medium */
-    rgba(0, 0, 0, 1) 100%  /* light bottom-right */
+    rgba(0, 0, 0, 0.6) 50%,  /* slightly lighter */
+    rgba(0, 0, 0, 0.6) 50%,  /* medium */
+    rgba(0, 0, 0, 0.1) 100%  /* light bottom-right */
   );
   
 }
