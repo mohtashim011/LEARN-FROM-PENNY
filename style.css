@@ -382,9 +382,13 @@ width: 80% !important;
   .container,.container-banner{
         padding: 80px 20px !important;
   }
+  .step-main h2 {
+    text-align: center;}
   .about-main{
     padding-top: 60px !important;
   }
+  .who-main2 {
+    justify-content: center !important;}
   .choose-1{
     padding: 60px 30px !important;
   }
@@ -481,7 +485,7 @@ width: 80% !important;
     padding: 10px !important;
   }
  
-}
+}}
 @media (max-width: 380px) {
 .footer-bottom2 p{
   font-size: 12px !important;
@@ -957,6 +961,7 @@ margin: 0 auto;
   .faq-question{
     font-size: 17px !important;
         align-items: flex-start !important;
+        gap: 10px !important;
   }
   .active{
     padding: 20px !important;
