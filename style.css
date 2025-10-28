@@ -447,7 +447,7 @@ width: 80% !important;
     flex-direction: column !important;
   }
   .most{
-    left: 48% !important;
+    left: 42% !important;
   }
   .icon-list1 li{
     font-size: 15px !important;
@@ -976,6 +976,17 @@ margin: 0 auto;
   .cus-h4{
     width: 90% !important;
   }
+  .sales-banner2 img{
+    width: 100% !important;
+  }
+  .poly-wrap{
+    display: flex !important;
+    align-items: center !important ;
+    justify-content: center !important;
+    width: 350px !important;
+    top: 35px !important;
+  }
+  
   .abt-img-icon{
     width: 50%  !important;
   }
