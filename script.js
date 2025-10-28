@@ -166,3 +166,27 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// Homepage video button
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const video = document.getElementById("bgVideo");
+      const toggleBtn = document.getElementById("videoToggle");
+
+      if (!video || !toggleBtn) {
+        console.error("Video or toggle button not found!");
+        return;
+      }
+
+      toggleBtn.addEventListener("click", () => {
+        console.log("Button clicked!");
+        if (video.paused) {
+          video.play();
+          toggleBtn.src = "img/pause-icon.svg";
+        } else {
+          video.pause();
+          toggleBtn.src = "img/pause-icon.svg";
+        }
+      });
+    });
+
+
