@@ -189,4 +189,31 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
+// Header 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const navbarMenu = document.getElementById("navbarMenu");
+
+  menuToggle.addEventListener("click", function () {
+    navbarMenu.classList.toggle("active");
+
+    // Toggle icon (☰ ↔ ✖)
+    if (navbarMenu.classList.contains("active")) {
+      menuToggle.textContent = "✖";
+    } else {
+      menuToggle.textContent = "☰";
+    }
+  });
+
+  // Optional: close menu when clicking a link
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+      navbarMenu.classList.remove("active");
+      menuToggle.textContent = "☰";
+    });
+  });
+});
+
+// menu
 
