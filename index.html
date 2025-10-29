@@ -23,12 +23,17 @@
             <a href="#" ><button class="top-btn">Enroll Now</button></a>
         </div>
         <div  class="main-video">
-             <video autoplay muted loop playsinline class="overlay-video" id="bgVideo">
-      <source src="video/Hero-section.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
+            <video autoplay muted loop playsinline class="overlay-video" id="bgVideo">
+  <source src="video/Hero-section.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
 
-    <img src="img/pause-icon.svg" alt="Toggle Video" class="video-toggle" id="videoToggle">
+<!-- Pause Button (shown initially) -->
+<img src="img/pause-icon.svg" alt="Pause Video" class="video-toggle" id="pauseBtn">
+
+<!-- Play Button (hidden initially) -->
+<img src="img/play-icon1.svg" alt="Play Video" class="video-toggle" id="playBtn" style="display:none;">
+
     
    <header>
   <div class="navbar-wrapper fade-in">
@@ -65,7 +70,7 @@
 
       <!-- Desktop Button -->
       <div class="header-btn desktop-btn">
-        <a class="header-btn2" href="#cta">
+        <a class="header-btn2 hover-animate" href="#cta">
           Enroll Now <img src="./img/btn-icon.svg" alt="User Icon">
         </a>
       </div>
@@ -77,14 +82,16 @@
         <div class="banner-main">
         <div class="banner-main1">
             <span class="heading-sub">LEARN FROM PENNY</span>
-            <h1>Step Into the Six-Figure Hospitality ‎ ‎ ‎  Playbook</h1>
+            <h1>Step Into the Six-Figure Hospitality <img src="/img/chess.svg" class="h1-img"> Playbook</h1>
             <p>Master Sales, Marketing, PR & HR in Tourism & Hospitality with the first-ever practical program designed for ambitious professionals.</p>
-              <a class="header-btn21 btn-primary d-flex align-items-center gap-2" href="#cta">
-        Enroll Today – Save 50% <img src="./img/btn.svg" alt="User Icon" width="30" height="30">
-      </a>
+              <a class="header-btn21 btn-primary d-flex align-items-center gap-2 hover-animate" href="#cta">
+    Enroll Today – Save 50% 
+    <img src="./img/btn.svg" alt="User Icon" width="30" height="30">
+</a>
+
         </div>
-        <div class="banner-main2">
-            <img src="/img/bg-rig.png" style="background-size: contain; margin-right: -220px;">
+        <div class="banner-main2 banner-img-spin">
+            <img class="banner-img-spin" src="/img/bg-rig.png" style="background-size: contain; margin-right: -220px; width: 550px;">
             
         </div>
 
@@ -298,7 +305,7 @@ style="
         <h2>About Penny</h1>
             <p>Hello, I’m Penny – a dedicated Business Consultant with a passion for transforming careers in the tourism and hospitality industry. Over the past decade, I’ve helped businesses worldwide grow their revenue, forge strategic partnerships, and secure exceptional outcomes. My journey has taken me from managing teams and leading complex negotiations to training countless professionals who now excel in senior roles.</p>
             <p>In my work, I combine my extensive experience in sales, marketing, contracting, and public relations with the latest industry trends—including harnessing AI for smarter business decisions. Whether you’re new to the industry or looking to advance your career, I offer practical insights, real‑world examples, and ongoing support. Together, we’ll overcome challenges and unlock your full potential to achieve six‑figure success.</p>
-              <a class="header-btn21 btn-primary d-flex align-items-center gap-2" href="#cta">
+              <a class="header-btn21 btn-primary d-flex align-items-center gap-2 hover-animate" href="#cta">
         Meet Penny <img src="./img/btn-icon2.svg" alt="User Icon" width="30" height="30">
       </a>
       </div>
@@ -380,7 +387,7 @@ style="
     </div> 
     </div>
     <div class="who-btn">
-  <a class="header-btnwho btn-primary d-flex align-items-center gap-2" href="#cta">
+  <a class="header-btnwho btn-primary d-flex align-items-center gap-2 hover-animate" href="#cta">
        Find Your Path <img src="./img/btn-icon-black.svg" alt="User Icon" width="30" height="30">
       </a>
   </div>
@@ -462,7 +469,7 @@ style="
     </div> 
     </div>
     <div class="who-btn">
-  <a class="header-btnwho btn-primary d-flex align-items-center gap-2" href="#cta">
+  <a class="header-btnwho btn-primary d-flex align-items-center gap-2 hover-animate" href="#cta">
        Find Your Path <img src="./img/btn-icon-black.svg" alt="User Icon" width="30" height="30">
       </a>
   </div>
@@ -698,7 +705,7 @@ style="
         <span class="choose-sub">WHY CHOOSE THIS COURSE?</span>
         <h2>Welcome to the 6-Figure Playbook</h2>
             <p>The Six-Figure Hospitality Playbook is a comprehensive, step‑by‑step course designed to launch your successful career in sales and marketing within the tourism and hospitality industry. Whether you’re transitioning from another field, starting from scratch, or ready to accelerate your growth, this course provides practical tools, proven strategies, and actionable insights to transform your career.</p>
-              <a class="header-btnwho btn-primary d-flex align-items-center gap-2" href="#cta">
+              <a class="header-btnwho btn-primary d-flex align-items-center gap-2 hover-animate" href="#cta">
        Enroll Now <img src="./img/btn-icon-black.svg" alt="User Icon" width="30" height="30">
       </a>
       </div>
@@ -804,7 +811,7 @@ style="
             <li><img src="/img/tickb.svg" alt="">Certificate of completion</li>
             <li><img src="/img/tickb.svg" alt="">One-off OR 3-6-month instalments (Stripe/PayPal/Klarna).</li>
           </ul>
-      <a class="header-btnwho btn-primary d-flex align-items-center gap-2" href="#cta">
+      <a class="header-btnwho btn-primary d-flex align-items-center gap-2 hover-animate" href="#cta">
        Enroll Now <img src="./img/btn-icon-black.svg" alt="User Icon" width="30" height="30">
       </a>
       
@@ -836,7 +843,7 @@ style="
             <li><img src="/img/tickw.svg" alt="">Full course access</li>
             <li><img src="/img/tickw.svg" alt="">Extended resources library</li>
           </ul>
-      <a class="header-btnwho btn-primary d-flex align-items-center gap-2 color-pr" href="#cta">
+      <a class="header-btnwho btn-primary d-flex align-items-center gap-2 color-pr hover-animate" href="#cta">
        Enroll Now <img src="./img/btn-icon-w.svg" alt="User Icon" width="30" height="30">
       </a>
       
@@ -1182,7 +1189,7 @@ style="
     <div class="footer-top">
     <h2>Your Six-Figure Journey Starts Here.</h2>
     <p>Flexible, practical, and transformational – designed for ambitious professionals in hospitality & tourism.</p>
-    <a class="header-btn2 btn-primary d-flex align-items-center gap-2" href="#cta">
+    <a class="header-btn2 btn-primary d-flex align-items-center gap-2 hover-animate" href="#cta">
         Enroll Today – Save 50% <img src="./img/btn-icon.svg" alt="User Icon" width="30" height="30">
       </a>
   </div>

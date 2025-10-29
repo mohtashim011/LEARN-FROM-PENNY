@@ -66,26 +66,92 @@ document.addEventListener("DOMContentLoaded", () => {
 
   faqItems.forEach(item => {
     const btn = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+
+    // If already active (from HTML), set height
+    if (item.classList.contains("active")) {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    }
 
     btn.addEventListener("click", () => {
-      // Close other FAQ items in the same tab
-      const visibleSection = item.closest(".text");
-      const visibleFaqs = visibleSection.querySelectorAll(".faq-item");
+      const section = item.closest(".faq-section");
+      const faqs = section.querySelectorAll(".faq-item");
 
-      visibleFaqs.forEach(i => {
-        if (i !== item) {
-          i.classList.remove("active");
-          i.querySelector(".icon").textContent = "+";
-        }
+      const isActive = item.classList.contains("active");
+
+      // Close all first
+      faqs.forEach(i => {
+        i.classList.remove("active");
+        i.querySelector(".faq-answer").style.maxHeight = null;
+        i.querySelector(".icon").textContent = "+";
       });
 
-      // Toggle current one
-      item.classList.toggle("active");
-      const icon = item.querySelector(".icon");
-      icon.textContent = item.classList.contains("active") ? "X" : "+";
+      // Open clicked
+      if (!isActive) {
+        item.classList.add("active");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        item.querySelector(".icon").textContent = "X";
+      }
+
+      // If all closed → open first FAQ in this section
+      const anyOpen = [...faqs].some(i => i.classList.contains("active"));
+      if (!anyOpen) {
+        openFirstFAQ(section);
+      }
+    });
+  });
+
+  // ✅ Call auto open for first visible tab
+  document.querySelectorAll(".faq-section").forEach(section => {
+    // Only if section is visible
+    if (section.offsetParent !== null) {
+      openFirstFAQ(section);
+    }
+  });
+
+  // ✅ When tab changes, auto-open first FAQ in new tab
+  const tabInputs = document.querySelectorAll('input[name="slider"]');
+
+  tabInputs.forEach(tab => {
+    tab.addEventListener("change", () => {
+      setTimeout(() => {
+        document.querySelectorAll(".faq-section").forEach(section => {
+          if (section.offsetParent !== null) {
+            openFirstFAQ(section);
+          }
+        });
+      }, 50);
     });
   });
 });
+
+function openFirstFAQ(section) {
+  const firstItem = section.querySelector(".faq-item");
+  if (!firstItem) return;
+
+  const answer = firstItem.querySelector(".faq-answer");
+  const icon = firstItem.querySelector(".icon");
+
+  // Close all
+  section.querySelectorAll(".faq-item").forEach(i => {
+    i.classList.remove("active");
+    i.querySelector(".faq-answer").style.maxHeight = null;
+    i.querySelector(".icon").textContent = "+";
+  });
+
+  // ✅ Open first item
+  firstItem.classList.add("active");
+  icon.textContent = "X";
+
+  requestAnimationFrame(() => {
+    answer.style.maxHeight = answer.scrollHeight + "px";
+  });
+}
+
+
+// For  FAQ TABS Homepage
+
+
 
 
 //For Countdown
@@ -135,13 +201,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const btn = item.querySelector(".toggle-btn");
 
     btn.addEventListener("click", () => {
-      // If this item is already open → close it
+
+      // Check if clicking on an already active item
       if (item.classList.contains("active")) {
         item.classList.remove("active");
+
+        // Check if all items are closed after removing
+        const anyOpen = Array.from(items).some(i => i.classList.contains("active"));
+
+        // If none open → open first
+        if (!anyOpen) {
+          items[0].classList.add("active");
+        }
       } else {
         // Close all others
         items.forEach(i => i.classList.remove("active"));
-        // Open the clicked one
+
+        // Open this one
         item.classList.add("active");
       }
     });
@@ -150,6 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (index === 0) item.classList.add("active");
   });
 });
+
 
 
 //Curve Text 
@@ -168,26 +245,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Homepage video button
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const video = document.getElementById("bgVideo");
-      const toggleBtn = document.getElementById("videoToggle");
+ document.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("bgVideo");
+  const pauseBtn = document.getElementById("pauseBtn");
+  const playBtn = document.getElementById("playBtn");
 
-      if (!video || !toggleBtn) {
-        console.error("Video or toggle button not found!");
-        return;
-      }
+  if (!video || !pauseBtn || !playBtn) {
+    console.error("Video or buttons not found!");
+    return;
+  }
 
-      toggleBtn.addEventListener("click", () => {
-        console.log("Button clicked!");
-        if (video.paused) {
-          video.play();
-          toggleBtn.src = "img/pause-icon.svg";
-        } else {
-          video.pause();
-          toggleBtn.src = "img/pause-icon.svg";
-        }
-      });
-    });
+  // Pause button clicked
+  pauseBtn.addEventListener("click", () => {
+    video.pause();
+    pauseBtn.style.display = "none";
+    playBtn.style.display = "block";
+  });
+
+  // Play button clicked
+  playBtn.addEventListener("click", () => {
+    video.play();
+    playBtn.style.display = "none";
+    pauseBtn.style.display = "block";
+  });
+});
+
 
 // Header 
 

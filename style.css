@@ -7,7 +7,7 @@ max-width: 1320px;
 margin: 0 auto;
 }
 .container-header{
-    padding: 20px;
+    padding: 10px 20px;
 max-width: 1320px;
 margin: 0 auto;
 }
@@ -26,7 +26,7 @@ body {
 h1{
     color: white;
      font-family: 'Playfair Display', serif;
-     font-size: 91px;
+     font-size: 85px;
      font-weight: 700;
      line-height: 1.1em;
 }
@@ -117,7 +117,7 @@ p{
 /* Header Video */
  .main-video {
       position: relative;
-      height: 1100px ;
+      height: auto ;
       overflow: hidden;
       background: linear-gradient(
         90deg,
@@ -143,17 +143,16 @@ p{
       position: absolute;
     bottom: 5%;
     right: 10%;
-    width: 80px;
+    width: 65px;
     height: auto;
     cursor: pointer;
     /* filter: invert(1); */
-    transition: transform 0.2s 
-ease;
+    transition: transform 0.2s ease;
     z-index: 5;
     }
 
     .video-toggle:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
 
 /* header */
@@ -176,7 +175,7 @@ ease;
   flex-direction: row;  
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  /* padding: 20px 0; */
   position: relative;
   z-index: 10;
 }
@@ -460,9 +459,49 @@ width: 80% !important;
     .who-main h2{
       width: 95%!important;
     }
-
+.banner-main1 h1{
+  width: 100% !important;
 }
+.h1-img{
+  width: 50px !important;
+}
+.banner-img-spin img{
+  position:absolute;
+  width: 450px !important;
+  top:25% !important
+}
+}
+
+.banner-img-spin {
+  animation: spin 30s linear infinite;
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.hover-animate {
+  transition: transform 0.25s ease-out, box-shadow 0.25s, background 0.25s;
+}
+
+.hover-animate:hover {
+  transform: translateY(0px) scale(1.05);
+}
+
+
 @media (max-width: 767px) {
+  .banner-main2 img{
+    width: 350px !important;
+    top: 30% !important;
+  }
+  .h1-img{
+  width: 35px !important;
+}
   .container-banner{
         padding: 40px 20px 80px 20px !important;
   }
@@ -590,7 +629,10 @@ width: 80% !important;
 .banner-main1{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
+}
+.banner-main1 h1{
+  width: 80%;
 }
 .banner-main1 p{
 color: white;
@@ -605,7 +647,7 @@ width: 70%;
     text-transform: uppercase;
 }
 .container-banner{
-padding: 120px 20px;
+padding: 80px 20px 120px 20px;
 max-width: 1320px;
 margin: 0 auto;
 
@@ -1065,9 +1107,6 @@ margin: 0 auto;
 @media (max-width: 767px) {
   .cus-h4{
     width: 90% !important;
-  }
-  .banner-main2 img{
-    width: 130% !important;
   }
   .sales-banner2 img{
     width: 100% !important;
@@ -1780,6 +1819,16 @@ margin: 0 auto;
   position: relative;
   z-index: 1; /* make sure all inner content stays above overlay */
 }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  /* transition: max-height 0.4s ease; */
+}
+
+/* .faq-item.active .faq-answer {
+  max-height: 200px; 
+} */
 
 
   /* .container-faq {
@@ -1931,7 +1980,7 @@ margin: 0 auto;
   .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
+    transition: max-height 0.4s ease;
     padding: 0;
     color: rgba(255, 255, 255, 0.7);
   }
@@ -1941,15 +1990,20 @@ margin: 0 auto;
     font-size: 16px;
     font-weight: 400;
   }
+  .faq-item.active {
+  background-color: #fff;
+  border-radius: 10px;
+  /* padding: 30px 30px 25px 30px; */
+}
 .active{
   background-color: #EACBC3;
   border-radius: 10px;
  padding: 30px 30px 25px 30px;
 }
-  .faq-item.active .faq-answer {
+  /* .faq-item.active .faq-answer {
     max-height: 300px;
     padding: 10px 0;
-  }
+  } */
 
   .faq-item.active .faq-question .icon {
     transform: rotate(180deg);
@@ -2035,7 +2089,8 @@ margin: 0 auto;
   aspect-ratio: 4/3;           /* keeps image responsive */
   overflow: hidden;
   position: absolute;
-  top: 30%;
+  top: 18%;
+  right: -25%;
 }
 
 .poly-img {
@@ -2134,6 +2189,7 @@ background: #F2DED9;
   justify-content: center;
   align-items: center;
 }
+
 
 /* Counterdown */
 
@@ -2305,6 +2361,9 @@ background: #F2DED9;
   animation: fadeIn 0.3s ease;
 }
 
+.timeline-item.active {
+  background: white;
+}
 .timeline-item.active .content-box {
   display: block;
 }
@@ -2357,7 +2416,12 @@ width: 85%;
   font-weight: 600;
   text-decoration: underline;
   color: #000 !important;
+    transition: all 0.3s ease-in-out;
 }
+.content-box a:hover {
+  color: #AE65BE !important;
+}
+
 .module-h4{
   font-size: 18px !important;
   font-weight: 500 !important;
