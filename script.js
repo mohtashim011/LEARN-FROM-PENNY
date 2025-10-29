@@ -149,8 +149,38 @@ function openFirstFAQ(section) {
 }
 
 
-// For  FAQ TABS Homepage
+// For Smooth Scroll on Menu Links Clicked
+document.querySelectorAll('#navbarMenu .nav-link[href^="#"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
 
+    const target = document.querySelector(this.getAttribute('href'));
+    if (!target) return;
+
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+});
+
+
+// For Fade in Animation
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeItems = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        entry.target.style.transitionDelay = `${index * 0.2}s`;
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  fadeItems.forEach(item => observer.observe(item));
+});
 
 
 

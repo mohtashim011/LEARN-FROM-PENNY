@@ -1,6 +1,9 @@
 *{
     margin: 0px;
 }
+html {
+  scroll-behavior: smooth;
+}
 .container{
   padding: 120px 20px;
 max-width: 1320px;
@@ -21,6 +24,21 @@ body {
       overflow-x: hidden;
 }
 
+/* Animation */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ------------------------------------ */
 
 
 h1{
@@ -1790,9 +1808,25 @@ margin: 0 auto;
   flex-direction: row;
   justify-content: space-between;
 }
-.xammin{
-  color: white !important;
+.xammin a{
+  color: #fff;
+  text-decoration: none;
+
 }
+.xammin a:hover {
+  text-decoration: underline;
+}
+
+.footer-list li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.footer-list li a:hover {
+  text-decoration: underline;
+}
+
 
 /* FAQs tabs */
 .faqs {
