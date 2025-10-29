@@ -2111,10 +2111,33 @@ margin: 0 auto;
   right: 0% !important;
 }
 .poly-wrap {
-  top: 130px !important;
+  width: 500px !important;
+  right: 15% !important;
 }
 
 }
+@media (max-width: 767px) {
+    .poly-wrap {
+        width: 300px !important;
+        right: 10% !important;
+        top: 15% !important;
+
+    }}
+        @media (max-width: 380px) {
+    .poly-wrap {
+        width: 270px !important;
+        right: 10% !important;
+        top: 15% !important;
+
+    }}
+    @media (max-width: 325px) {
+    .poly-wrap {
+        width: 220px !important;
+        right: 10% !important;
+        top: 15% !important;
+
+    }}
+
 .sales-banner2{
   width: 40%;
   padding-bottom: 100px;
