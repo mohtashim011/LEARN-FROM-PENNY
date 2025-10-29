@@ -2580,3 +2580,19 @@ margin: 0 auto;
       position: relative;
       z-index: 4 !important;
     }
+
+
+    /* ------------------------------------ */
+
+    /* Privacy Page */
+
+  
+    .privacy-main{
+      gap: 40px;
+      
+    }
+    .privacy-heading{
+      color: #000 !important;
+      text-align: start !important;
+    }
+   
