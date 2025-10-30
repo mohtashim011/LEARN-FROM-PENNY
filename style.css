@@ -252,6 +252,7 @@ p{
   }
   header{
     z-index: 999 !important;
+    position: relative;
   }
   .banner-z{
     z-index: 1 !important;
