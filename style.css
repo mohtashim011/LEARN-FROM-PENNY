@@ -537,6 +537,7 @@ width: 80% !important;
     flex-direction:column !important;
     flex-wrap: nowrap !important;
     opacity: 1 !important;
+    align-items: center !important;
   }
   .choose-1{
     padding: 60px 30px !important;
