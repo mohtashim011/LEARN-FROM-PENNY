@@ -327,5 +327,53 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// menu
+// FOOTER SVG DRAW
+  
+window.addEventListener('load', () => {
+  const path = document.getElementById('myPath');
+
+  // ensure no fill (in case inline svg or external CSS adds it)
+  path.style.fill = 'none';
+
+  // get exact length and set dash properties
+  const length = path.getTotalLength();
+  path.style.strokeDasharray = length;
+  path.style.strokeDashoffset = length;
+
+  // CSS animation via JS (so length is exact)
+  path.style.transition = 'stroke-dashoffset 2.2s ease';
+
+  // Trigger reflow and start animation
+  requestAnimationFrame(() => {
+    path.style.strokeDashoffset = '0';
+  });
+});
+
+
+
+// <!-- For footer svg -->
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const svgSection = document.querySelector('.svg-footer');
+  const goldPath = document.querySelector('#goldPath');
+
+  // Prevent errors if elements are missing
+  if (!svgSection || !goldPath) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+
+        // Start animation
+        goldPath.classList.add('animate-line');
+
+        // Stop observing after first trigger
+        observer.unobserve(svgSection);
+      }
+    });
+  }, { threshold: 0.3 }); // Trigger when 30% visible
+
+  observer.observe(svgSection);
+});
 

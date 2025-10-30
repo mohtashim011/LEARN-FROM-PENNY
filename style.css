@@ -414,9 +414,7 @@ text-align: center;
 .footer-top p{
   width: 80% !important;
 }
-.svg-footer img{
-  width: 100%;
-}
+
 .footer-bottom1{
   flex-direction: column !important;
   gap: 40px !important;
@@ -1829,6 +1827,11 @@ margin: 0 auto;
 
 .footer-list li a:hover {
   text-decoration: underline;
+}
+
+/* fOOTER svg */
+.svg-footer svg{
+  background-image: none !important;
 }
 
 
