@@ -535,7 +535,10 @@ width: 80% !important;
     padding-top: 60px !important;
   }
   .who-main2 {
-    justify-content: center !important;}
+    justify-content: center !important;
+    flex-direction:column !important;
+    flex-wrap: nowrap !important;
+  }
   .choose-1{
     padding: 60px 30px !important;
   }
