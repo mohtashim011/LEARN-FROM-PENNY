@@ -377,3 +377,24 @@ window.addEventListener('load', () => {
 //   observer.observe(svgSection);
 // });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const footerSection = document.querySelector(".svg-footer");
+  if (!footerSection) return;
+
+  // Pause SVG initially
+  const svgs = footerSection.querySelectorAll("svg");
+  svgs.forEach(svg => svg.pauseAnimations());
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        svgs.forEach(svg => svg.unpauseAnimations());
+        observer.unobserve(entry.target); // run once
+      }
+    });
+  }, { threshold: 0.1 });
+
+  observer.observe(footerSection);
+});
+
