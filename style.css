@@ -648,6 +648,15 @@ width: 80% !important;
 
 }
   
+.btn-hover-change:hover img {
+    content: url("./img/hover-icon.svg");
+}
+
+.btn-hover-change1:hover img {
+    content: url("./img/hover-iconp.svg");
+}
+
+
 .banner-main1{
     display: flex;
     flex-direction: column;
