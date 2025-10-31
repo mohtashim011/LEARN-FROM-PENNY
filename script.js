@@ -353,27 +353,27 @@ window.addEventListener('load', () => {
 
 // <!-- For footer svg -->
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
-  const svgSection = document.querySelector('.svg-footer');
-  const goldPath = document.querySelector('#goldPath');
+//   const svgSection = document.querySelector('.svg-footer');
+//   const goldPath = document.querySelector('#goldPath');
 
-  // Prevent errors if elements are missing
-  if (!svgSection || !goldPath) return;
+//   // Prevent errors if elements are missing
+//   if (!svgSection || !goldPath) return;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
 
-        // Start animation
-        goldPath.classList.add('animate-line');
+//         // Start animation
+//         goldPath.classList.add('animate-line');
 
-        // Stop observing after first trigger
-        observer.unobserve(svgSection);
-      }
-    });
-  }, { threshold: 0.3 }); // Trigger when 30% visible
+//         // Stop observing after first trigger
+//         observer.unobserve(svgSection);
+//       }
+//     });
+//   }, { threshold: 0.3 }); // Trigger when 30% visible
 
-  observer.observe(svgSection);
-});
+//   observer.observe(svgSection);
+// });
 
