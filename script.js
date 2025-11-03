@@ -230,33 +230,28 @@ document.addEventListener("DOMContentLoaded", () => {
   items.forEach((item, index) => {
     const btn = item.querySelector(".toggle-btn");
 
+    // Open first item on page load
+    if (index === 0 || item.classList.contains("active")) {
+      item.classList.add("active");
+    }
+
     btn.addEventListener("click", () => {
+      const isActive = item.classList.contains("active");
 
-      // Check if clicking on an already active item
-      if (item.classList.contains("active")) {
-        item.classList.remove("active");
+      // Close all items
+      items.forEach(i => i.classList.remove("active"));
 
-        // Check if all items are closed after removing
-        const anyOpen = Array.from(items).some(i => i.classList.contains("active"));
-
-        // If none open → open first
-        if (!anyOpen) {
-          items[0].classList.add("active");
-        }
-      } else {
-        // Close all others
-        items.forEach(i => i.classList.remove("active"));
-
-        // Open this one
+      // Open clicked item if it wasn't active
+      if (!isActive) {
         item.classList.add("active");
+      } else {
+        // If clicked active → check if all closed → reopen first item
+        const anyOpen = Array.from(items).some(i => i.classList.contains("active"));
+        if (!anyOpen) items[0].classList.add("active");
       }
     });
-
-    // First item open by default
-    if (index === 0) item.classList.add("active");
   });
 });
-
 
 
 //Curve Text 
@@ -353,29 +348,6 @@ window.addEventListener('load', () => {
 
 // <!-- For footer svg -->
 
-// document.addEventListener("DOMContentLoaded", function () {
-
-//   const svgSection = document.querySelector('.svg-footer');
-//   const goldPath = document.querySelector('#goldPath');
-
-//   // Prevent errors if elements are missing
-//   if (!svgSection || !goldPath) return;
-
-//   const observer = new IntersectionObserver((entries) => {
-//     entries.forEach(entry => {
-//       if (entry.isIntersecting) {
-
-//         // Start animation
-//         goldPath.classList.add('animate-line');
-
-//         // Stop observing after first trigger
-//         observer.unobserve(svgSection);
-//       }
-//     });
-//   }, { threshold: 0.3 }); // Trigger when 30% visible
-
-//   observer.observe(svgSection);
-// });
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -398,3 +370,4 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(footerSection);
 });
 
+//for Timeline smooth transiitons 
