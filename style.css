@@ -1950,7 +1950,15 @@ margin: 0 auto;
     text-align: center;
     color: #fff;
   }
-
+.faq-sub-main{
+  display: flex;
+    align-content: flex-start;
+    gap: 50px;
+    justify-content: space-between;
+}
+  .faq-sub{
+    width: 50%;
+  }
   .content {
     display: flex;
     gap: 40px;
