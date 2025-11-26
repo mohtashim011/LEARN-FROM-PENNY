@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const paragraph = document.querySelector(".hide-text");
+    const btn = document.querySelector(".hide-text-btn");
+
+    btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        paragraph.classList.add("show-text");
+        btn.style.display = "none";
+    });
+});
+
+
+
 // For Counter
 (function () {
   const duration = 2000; // total animation time (ms)
@@ -16,6 +29,7 @@
       raw: numStr
     };
   }
+
 
   function formatNumber(value, templateStr) {
     const decimalsMatch = templateStr.match(/\.(\d+)/);

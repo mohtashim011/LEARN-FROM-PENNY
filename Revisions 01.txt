@@ -7,7 +7,7 @@ FAQ -
 footer svg 
 
 
-Menu Links 
+Menu Links -
 
 
 Sales PAGE
@@ -21,9 +21,9 @@ X size reduce -
 FAQ gap -
 
 
-Footer links hover underline
+Footer links hover underline-
 Leagal Dislamer
-Privacy Policy page
+Privacy Policy page-
 
 
-Animations 
+Animations -

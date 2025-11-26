@@ -758,6 +758,10 @@ margin: 0 auto;
   color: #000;
 }
 
+.step-h2 h2{
+  width: 80% ;
+  text-align: center;
+}
 /* flipbox */
 
 
@@ -973,7 +977,12 @@ margin: 0 auto;
     color: #ffffff;
 }
 
-
+.all-span{
+  font-size: 12px;
+  font-style: italic;
+  width: 80%;
+  color: white !important;
+}
 /* About */
 
 .custom-svg{
@@ -1012,6 +1021,18 @@ margin: 0 auto;
   
 }
 
+.hide-text {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.hide-text.show-text {
+    display: block;
+    opacity: 1;
+}
+
+
 .abt-1::after {
   content: "";
   position: absolute;
@@ -1036,6 +1057,7 @@ margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
+      justify-content: center;
 }
 .abt-2 p,h2{
   color: white;
@@ -2435,6 +2457,7 @@ background: #F2DED9;
   border: 3px solid #fff;
   border-radius: 50%;
   z-index: 2;
+  margin-top: 20px;
 }
 
 .timeline-content h4 {
