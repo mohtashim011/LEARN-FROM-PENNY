@@ -1952,6 +1952,7 @@ margin: 0 auto;
   }
 .faq-sub-main{
   display: flex;
+  flex-direction: row;
     align-content: flex-start;
     gap: 50px;
     justify-content: space-between;
@@ -2139,6 +2140,16 @@ margin: 0 auto;
   height: auto;
   
 }
+
+.faq-sub-main{
+
+  flex-direction: column !important;
+  gap: 20px !important;
+  
+}
+  .faq-sub{
+    width: 100% !important;
+  }
 }
 
 .sales-bg::before {
