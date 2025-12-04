@@ -758,7 +758,7 @@ margin: 0 auto;
   color: #000;
 }
 
-.step-h2 h2{
+.step-h2 h2, .step-main p{
   width: 80% ;
   text-align: center;
 }
@@ -1009,14 +1009,15 @@ margin: 0 auto;
   gap: 40px;
   padding-top: 120px;
 }
-.abt-1 img{
+.abt-11 img{
  border: 1px solid white;
  border-radius: 30px;
+ 
 }
-.abt-1 {
+.abt-11 {
   position: relative;
   display: inline-block;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   border-radius: 30px;
   
 }
@@ -1031,9 +1032,25 @@ margin: 0 auto;
     display: block;
     opacity: 1;
 }
+.abt-11-wrapper {
+  flex: 1;
+  position: relative; 
+}
 
+.abt-1{
+      display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
 
-.abt-1::after {
+.abt-11 {
+    display: flex;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+}
+.abt-11::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -1045,7 +1062,7 @@ margin: 0 auto;
 .abt-img-icon{
   position: absolute;
   border: none !important;
-  bottom: 0%;
+  bottom: 1%;
   right: 0%;
   height: auto;
 }
@@ -1053,14 +1070,21 @@ margin: 0 auto;
   width: 595px;
   height: 100%;
 }
+
 .abt-2{
   display: flex;
   flex-direction: column;
   gap: 30px;
       justify-content: center;
+      /* width: 50%; */
 }
 .abt-2 p,h2{
   color: white;
+}
+.abt-11-wrapper {
+ 
+     position: sticky;
+  top: 20px; /* distance from top when scrolling */        /* same width as your main image */
 }
 
 
@@ -1359,16 +1383,25 @@ margin: 0 auto;
   flex-direction: row;
   gap: 50px;
   width: 100%;
+  overflow: hidden;
 }
 .choose-2 img{
   border-radius: 0px 50px 50px 0px;
   margin-top: 0px;
   margin-bottom: -07px;
+  background-position: center center;
+  background-size: cover;
 }
 .choose-2{
   margin: 0;
   padding: 0;
   width: 50%;
+  overflow: clip;
+      display: flex;
+    justify-content: center;
+}
+.choose-img{
+  object-fit: cover;
 }
 .choose-1{
   padding: 70px;
@@ -2297,7 +2330,7 @@ background: #F2DED9;
   background: #F8EFEC;
   border-radius: 22px;
   padding: 35px 30px;
-  width: 25%;
+  width: 27%;
 }
 .enroll-con-1{
     display: flex;
@@ -2319,6 +2352,8 @@ background: #F2DED9;
   flex-direction: row;
   gap: 20px;
   padding-top: 80px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .enroll-con-1 span{
   font-size: 15px;
@@ -2750,11 +2785,34 @@ margin: 0 auto;
 
   
     .privacy-main{
-      gap: 40px;
+      gap: 20px;
+          align-items: start;
       
     }
+    .privacy-main h2{
+      text-align: center;
+      width: 100%;
+      padding-bottom: 30px;
+    }
+    .privacy-main p {
+    width: 100%;
+    text-align: left;
+}
+
+.privacy-main p a{
+      color: black;
+    
+}
+.privacy-list li{
+  font-size: 20px;
+    font-weight: 400;
+    line-height: 2em;
+    font-family: 'Poppins';
+    color: black;
+}
     .privacy-heading{
       color: #000 !important;
       text-align: start !important;
+      padding-top: 30px;
     }
    

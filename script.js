@@ -1,13 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const paragraph = document.querySelector(".hide-text");
+    const paragraph = document.querySelector(".hide-text"); 
     const btn = document.querySelector(".hide-text-btn");
+    const shortContent = document.querySelector(".short-content");
+    const stickyWrapper = document.querySelector(".abt-11-wrapper");
 
     btn.addEventListener("click", function (e) {
         e.preventDefault();
+
+        // Show full content
         paragraph.classList.add("show-text");
+
+        // Make the image sticky
+        stickyWrapper.classList.add("sticky");
+
+        // Hide the button
         btn.style.display = "none";
+
+        // Hide short content
+        if (shortContent) {
+            shortContent.style.display = "none";
+        }
     });
 });
+
 
 
 
@@ -108,20 +123,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // If all closed → open first FAQ in this section
-      const anyOpen = [...faqs].some(i => i.classList.contains("active"));
-      if (!anyOpen) {
-        openFirstFAQ(section);
-      }
+      // const anyOpen = [...faqs].some(i => i.classList.contains("active"));
+      // if (!anyOpen) {
+      //   openFirstFAQ(section);
+      // }
     });
   });
 
   // ✅ Call auto open for first visible tab
-  document.querySelectorAll(".faq-section").forEach(section => {
-    // Only if section is visible
-    if (section.offsetParent !== null) {
-      openFirstFAQ(section);
-    }
-  });
+  // document.querySelectorAll(".faq-section").forEach(section => {
+  //   // Only if section is visible
+  //   if (section.offsetParent !== null) {
+  //     openFirstFAQ(section);
+  //   }
+  // });
 
   // ✅ When tab changes, auto-open first FAQ in new tab
   const tabInputs = document.querySelectorAll('input[name="slider"]');
